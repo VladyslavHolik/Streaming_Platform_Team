@@ -28,6 +28,8 @@ jobs:
         with:
           push: true
           tags: invictodockerid/streaming_platform:latest
+          cache-from: type=registry,ref=invictodockerid/streaming_platform:latest
+          cache-to: type=inline
       -
         name: Image digest
         run: echo ${{ steps.docker_build.outputs.digest }}
