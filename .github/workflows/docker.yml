@@ -23,11 +23,13 @@ jobs:
           password: 4dbcadc3-e22c-4dc7-baa2-cefc90bb2fa6
       -
         name: Build and push
+        id: docker_build
         uses: docker/build-push-action@v2
         with:
-          context: .
           push: true
           tags: user/app:latest
+          username: invictodockerid
+          password: 4dbcadc3-e22c-4dc7-baa2-cefc90bb2fa6
       -
         name: Image digest
         run: echo ${{ steps.docker_build.outputs.digest }}
