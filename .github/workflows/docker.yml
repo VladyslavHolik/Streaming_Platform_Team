@@ -23,7 +23,7 @@ jobs:
           password: 4dbcadc3-e22c-4dc7-baa2-cefc90bb2fa6
       -
         name: Build and push
-        id: docker_build
+        id: invictodockerid
         uses: docker/build-push-action@v2
         with:
           push: true
