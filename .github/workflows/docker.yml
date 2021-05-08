@@ -19,8 +19,8 @@ jobs:
         name: Login to DockerHub
         uses: docker/login-action@v1 
         with:
-          username: invictodockerid
-          password: 4dbcadc3-e22c-4dc7-baa2-cefc90bb2fa6
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
       -
         name: Build and push
         id: docker_build
